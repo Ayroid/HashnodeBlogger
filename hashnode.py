@@ -51,6 +51,7 @@ class HashNodeBlogSync:
                 "existing_post_id": post.get(
                     "hashnode_post_id"
                 ),  # Get existing post ID
+                "tags": [{"name": tag, "slug": tag} for tag in post.get("tags", [])],
             }
         except Exception as e:
             self.logger.error(f"Error parsing Markdown file {filepath}: {e}")
