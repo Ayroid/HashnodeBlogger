@@ -1,2 +1,4 @@
 venv
 constants.py
+google_drive_credentials.json
+__pycache__
